@@ -121,7 +121,8 @@ class EdgeTPUModel:
             logger.warn("Interpreter is not yet loaded")
 
     def predict(self, image_path, save_img=True, save_txt=True):
-        logger.info("Attempting to load {}".format(image_path))
+        if type(img) is str: 
+            logger.info("Attempting to load {}".format(image_path))
     
         full_image, net_image, pad = get_image_tensor(image_path, self.input_size[0])
 

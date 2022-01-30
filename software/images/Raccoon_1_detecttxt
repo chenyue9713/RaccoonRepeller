@@ -1,0 +1,13 @@
+{
+ "/home/mendel/RaccoonRepeller/software/images/Raccoon_1_detect": {
+  "box": [
+   734.0,
+   49.0,
+   3374.0,
+   2367.0
+  ],
+  "conf": 0.80222487449646,
+  "cls": 2.0,
+  "cls_name": "2"
+ }
+}
