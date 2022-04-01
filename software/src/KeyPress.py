@@ -1,22 +1,24 @@
-from pynput import keyboard
+#!/usr/bin/python3
+# from pynput.keyboard import Key, Listener
 
-def on_press(key):
-    try:
-        print('Alphanumeric key pressed: {0} '.format(
-            key.char))
-    except AttributeError:
-        print('special key pressed: {0}'.format(
-            key))
+# def on_press(key):
+#     print('{0} pressed'.format(
+#         key))
 
-def on_release(key):
-    print('Key released: {0}'.format(
-        key))
-    if key == keyboard.Key.esc:
-        # Stop listener
-        return False
+# def on_release(key):
+#     print('{0} release'.format(
+#         key))
+#     if key == Key.esc:
+#         # Stop listener
+#         return False
 
-# Collect events until released
-with keyboard.Listener(
-        on_press=on_press,
-        on_release=on_release) as listener:
-    listener.join()
+# # Collect events until released
+# with Listener(
+#         on_press=on_press,
+#         on_release=on_release) as listener:
+#     listener.join()
+
+import keyboard
+
+keyboard.wait("p")
+print("You pressed p")
